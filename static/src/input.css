@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+    @apply h-screen md:h-16 md:w-full w-12 flex justify-center items-center left-0 top-0 fixed z-50
+}
+
+.navbar_style {
+    @apply w-10 flex flex-col gap-0 font-bold rounded-xl justify-center items-center bg-nav_bg overflow-hidden md:flex-row md:w-screen md:bg-transparent md:gap-5 
+}
+
+.side_nav {
+    @apply px-2 py-5 rounded-xl hover:bg-red-500 md:hidden
+}
+
+.top_nav {
+    @apply hover:text-red-600 hidden md:block
+}
+
+
+/* ...........home........... */
+.bg_blur_effect {
+    @apply absolute w-96 h-96 top-20 -left-32 rounded-full filter blur-xl opacity-60 md:hidden
+}
+
+.hero_btn{
+    @apply flex justify-center items-center lg:justify-start gap-5 w-full mt-5 text-lg font-semibold
+}
+.btn {
+    @apply hover:text-white w-40 md:w-60 py-3 rounded-lg border-2 border-red-900
+}
+
+.hero_text {
+    @apply absolute h-72 w-screen bottom-0 rounded-tr-full border-t-2 border-white bg-nav_bg md:hidden
+}
+
+.hero_md{
+    @apply w-full h-full pt-24 absolute flex justify-center place-items-start
+}
+.hero_text_md{
+    @apply absolute h-72 lg:h-36 w-screen bottom-0 border-t-2 bg-body_bg lg:bg-body_clr lg:backdrop-blur-3xl border-red-600 rounded-box5
+}
+.lg_box_img{
+    @apply rounded-lg_box1 flex justify-center items-center
+}

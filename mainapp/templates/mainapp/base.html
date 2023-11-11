@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} Moynul</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+</head>
+<body class="bg-body_clr text-text_clr "> 
+    <header class="header md:{% if nav_item != 'home' %} bg-nav_bg {% endif %}">
+            <nav class="navbar_style">
+                <a href="#home" class="side_nav">
+                    <img src="{% static 'assets/icon/home.png' %}" alt="">
+                </a>
+                <a href="#about" class="side_nav">
+                    <img src="{% static 'assets/icon/about.png' %}" alt="">
+                </a>
+                <a href="#resume" class="side_nav">
+                    <img src="{% static 'assets/icon/resume.png' %}" alt="">
+                </a>
+                <a href="#portfolio" class="side_nav">
+                    <img src="{% static 'assets/icon/portfolio.png' %}" alt="">
+                </a>
+                <a href="#services" class="side_nav">
+                    <img src="{% static 'assets/icon/service.png' %}" alt="" >
+                </a>
+                <a href="#contacts" class="px-2 py-5 rounded-t-xl  hover:bg-red-500 md:hidden">
+                    <img src="{% static 'assets/icon/mail.png' %}" alt="">
+                </a>
+
+                <a href="#toggle" class="px-2 py-1 bg-red-500 hover:bg-red-800 md:hidden">
+                    <img src="{% static 'assets/icon/down.png' %}" alt="">
+                </a>
+ 
+ 
+                <a href="#home" class="top_nav {% if nav_item == 'home' %} active {% endif %}">Home</a>
+                <a href="#about" class="top_nav {% if nav_item == 'about' %} active {% endif %}">About</a>
+                <a href="#resume" class="top_nav {% if nav_item == 'home' %} active {% endif %}">Resume</a>
+                <a href="#portfolio" class="top_nav {% if nav_item == 'home' %} active {% endif %}">Portfolio</a> 
+                <a href="#services" class="top_nav {% if nav_item == 'home' %} active {% endif %}">Services</a>
+                <a href="#contacts" class="top_nav {% if nav_item == 'home' %} active {% endif %} ">Contacts</a>
+            </nav>
+    </header>
+
+   
+    
+    <div class="h-full w-full" >
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
